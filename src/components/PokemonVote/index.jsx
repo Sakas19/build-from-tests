@@ -31,7 +31,11 @@ function PokemonVote() {
 
   return (
     <div>
-      <CalculateWinner votes={votes} />
+      <CalculateWinner
+        bulbasaurVote={votes.bulbasaur}
+        charmanderVote={votes.charmander}
+        squirtleVote={votes.squirtle}
+      />
       {Object.keys(pokemonNames).map((pokemon) => (
         <div key={pokemon}>
           <h3>{pokemonNames[pokemon]}</h3>
